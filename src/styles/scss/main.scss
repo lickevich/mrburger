@@ -1,7 +1,11 @@
-//Config
+// //Config
 @import 'config/variables.scss';
 @import 'config/mixins.scss';
-//Layout
+// // //Layout
 @import 'layout/fonts.scss';
 @import 'layout/base.scss';
-//Blocks
+// //Blocks
+@import 'blocks/intro.scss';
+@import 'blocks/header.scss';
+@import 'blocks/nav.scss';
+@import 'blocks/btn.scss';
