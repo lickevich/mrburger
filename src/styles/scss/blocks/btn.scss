@@ -1,0 +1,10 @@
+.btn {
+    background-color: $orange;
+    padding: 10px 15px;
+    color: #fff;
+    border-radius: 5px;
+    
+    &:hover {
+        background-color: $red;    
+    }
+}

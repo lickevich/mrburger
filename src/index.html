@@ -6,6 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Главная страница</title>
+  <link rel="icon" type="image/x-icon" href="../images/favicon/mrburger-favicon.ico">
   <link rel="stylesheet" href="styles/found/normalize.css">
   <link rel="stylesheet" href="styles/main.css">
 </head>
@@ -13,8 +14,11 @@
 <body>
   <div class="wrapper">
     <div class="maincontent">
+
+<!-- ----------------SECTION INTRO----------------- -->
+
       <section class="intro section">
-        <div class="container">
+        <div class="container container--without-align">
           <header class="header">
             <div class="logo">
               <img src="../images/logo/logo.svg" alt="" class="logo_img">
@@ -35,17 +39,67 @@
             </div>
           </header>
           <div class="intro__container">
-            <div class="intro__picture"></div>
             <div class="intro__content">
-              <h1 class="title">мы делаем</h1>
-              <div class="intro__desc">натуральные бургеры</div>
+                <div class="intro__picture">
+                  <img src="../images/content/intro/burger_main.png" alt="" class="intro__burger__img">
+                </div>
+                <div class="intro__text">
+                  <h1 class="title">мы делаем</h1>
+                  <p class="intro__desc">натуральные бургеры</p>
+                </div>
             </div>
           </div>
         </div>
-        <a href="#" class="to-next-section"></a>
+        <a href="#" class="to-next-section">
+          <img src="../images/svgicons/arrow-scroll.svg" alt="" class="to-next-section-img">
+        </a>
       </section>
+
+<!-- ----------------SECTION BEST----------------- -->
+
+      <section class="best section">
+        <div class="best__top">
+            <h1 class="title">мы лучшие</h1>
+        </div>
+        <div class="best__container">
+          <div class="best__content">
+            <ul class="best__list">
+              <li class="best__item">
+                <img src="" alt="" class="best__item__picture">
+                <h4 class="title">100% свежее мясо</h4>
+                <p class="best__item__text"></p>
+              </li>
+              <li class="best__item">
+                <img src="" alt="" class="best__item__picture">
+                <h4 class="title">ручная сборка</h4>
+                <p class="best__item__text"></p>
+              </li>
+              <li class="best__item">
+                <img src="" alt="" class="best__item__picture">
+                <h4 class="title">натуральные ингредиенты</h4>
+                <p class="best__item__text"></p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+      
     </div>
   </div>
+
+      <div class="points">
+        <ul class="points__list">
+          <li class="point__item"><a href="#" class="point__link point__link--active"></a></li>
+          <li class="point__item"><a href="#" class="point__link"></a></li>
+          <li class="point__item"><a href="#" class="point__link"></a></li>
+          <li class="point__item"><a href="#" class="point__link"></a></li>
+          <li class="point__item"><a href="#" class="point__link"></a></li>
+          <li class="point__item"><a href="#" class="point__link"></a></li>
+          <li class="point__item"><a href="#" class="point__link"></a></li>
+          <li class="point__item"><a href="#" class="point__link"></a></li>
+          <li class="point__item"><a href="#" class="point__link"></a></li>
+        </ul>
+      </div>
 </body>
 
 </html>
