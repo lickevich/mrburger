@@ -1,0 +1,9 @@
+h1.title {
+    font-family: "Gagalin-Regular";
+    font-size: 72px;
+    color: $yellow;
+
+    &--black {
+        color: $black;
+    }
+}

@@ -1,3 +1,11 @@
 .best {
     background: url("../images/bg/best-bg.jpg") center center / cover no-repeat;
 }
+
+.best__content {
+    text-align: center;
+}
+
+.best__list {
+    display: flex;
+}
