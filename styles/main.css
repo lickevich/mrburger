@@ -1,0 +1,374 @@
+@font-face {
+  font-family: 'Ubuntu';
+  src: url("../../../fonts/Ubuntu/Ubuntu.woff") format("woff");
+  src: url("../../../fonts/Ubuntu/Ubuntu.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Ubuntu-Light';
+  src: url("../../../fonts/Ubuntu/Ubuntu-Light.woff") format("woff");
+  src: url("../../../fonts/Ubuntu/Ubuntu-Light.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Ubuntu-Medium';
+  src: url("../../../fonts/Ubuntu/Ubuntu-Medium.woff") format("woff");
+  src: url("../../../fonts/Ubuntu/Ubuntu-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Ubuntu-Bold';
+  src: url("../../../fonts/Ubuntu/Ubuntu-Bold.woff") format("woff");
+  src: url("../../../fonts/Ubuntu/Ubuntu-Bold.woff2") format("woff2");
+  font-weight: bold;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Lifehack-Medium';
+  src: url("../../../fonts/Lifehack/Lifehack-Medium.woff") format("woff");
+  src: url("../../../fonts/Lifehack/Lifehack-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Gagalin-Regular';
+  src: url("../../../fonts/Gagalin/Gagalin-Regular.woff") format("woff");
+  src: url("../../../fonts/Gagalin/Gagalin-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal; }
+
+html,
+body {
+  height: 100%; }
+
+body {
+  font-size: 16px;
+  line-height: 1.42;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+  font-family: 'Ubuntu', Helvetica, sans-serif;
+  font-weight: 300;
+  color: #2f3234; }
+
+.container {
+  margin: 0 auto;
+  width: 940px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100%; }
+  .container--without-align {
+    -webkit-box-pack: initial;
+    -webkit-justify-content: initial;
+        -ms-flex-pack: initial;
+            justify-content: initial; }
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  min-width: 960px;
+  min-height: 100%;
+  overflow: hidden; }
+
+.section {
+  height: 100vh;
+  min-height: 650px; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+  font-weight: normal; }
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+ul {
+  padding: 0;
+  margin: 0; }
+  ul li {
+    list-style: none; }
+
+a {
+  text-decoration: none; }
+
+p {
+  padding: 0;
+  margin: 0; }
+
+footer {
+  position: relative;
+  width: 100%; }
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box; }
+
+.intro {
+  background: url("../images/bg/intro-bg.jpg") center center/cover no-repeat; }
+
+.intro__container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: .75;
+  -webkit-flex: .75;
+      -ms-flex: .75;
+          flex: .75; }
+
+.intro__content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center; }
+
+.intro__text {
+  padding-top: 100px;
+  margin-left: 13px; }
+
+.intro__desc {
+  font-family: "Lifehack-Medium";
+  font-size: 65px;
+  color: #fff;
+  line-height: 1; }
+
+.header {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 10px; }
+
+.header__buttons {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-transform: uppercase; }
+
+.nav {
+  margin-right: 15px; }
+
+.nav__list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.nav__item:last-child .nav__link:after {
+  display: none; }
+
+.nav__link {
+  color: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 13px; }
+  .nav__link:after {
+    content: "";
+    width: 4px;
+    height: 4px;
+    display: block;
+    background: #fff;
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
+    margin: 0 15px; }
+
+.btn {
+  background-color: #e45028;
+  padding: 10px 15px;
+  color: #fff;
+  -webkit-border-radius: 5px;
+          border-radius: 5px;
+  text-transform: uppercase;
+  font-size: 13px; }
+  .btn--black {
+    background: #2f3234; }
+
+.best {
+  background: url("../images/bg/best-bg.jpg") center center/cover no-repeat; }
+
+.best__content {
+  text-align: center; }
+
+.best__content-title {
+  margin-bottom: 35px; }
+
+.best__list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.best__item {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.best__text {
+  font-family: "Ubuntu-Light";
+  font-size: 14px;
+  line-height: 1.8; }
+
+.best__picture-cont {
+  margin-bottom: 25px;
+  min-height: 90px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+.best__desc {
+  text-align: center; }
+
+.points {
+  position: fixed;
+  top: 13%;
+  right: 9%; }
+
+.point__item {
+  padding-bottom: 20px; }
+
+.point__link {
+  width: 6px;
+  height: 6px;
+  -webkit-border-radius: 50%;
+          border-radius: 50%;
+  background: #fff;
+  display: block; }
+  .point__link--active:after {
+    content: "";
+    width: 15px;
+    height: 15px;
+    display: block;
+    border: 1px solid #fff;
+    -webkit-border-radius: 50%;
+            border-radius: 50%;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }
+
+h1.title {
+  font-family: "Gagalin-Regular";
+  font-size: 72px;
+  color: #f9b43b; }
+  h1.title--black {
+    color: #2f3234; }
+
+.best__title {
+  font-family: "Lifehack-Medium";
+  font-size: 24px;
+  margin-bottom: 12px; }
+
+.reviews__item-title {
+  font-family: "Gagalin-Regular";
+  font-size: 14px;
+  margin-bottom: 20px; }
+
+.reviews {
+  background: black; }
+
+.reviews__list {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  height: 100%; }
+
+.reviews__item {
+  width: 25%;
+  height: 50%;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+  position: relative;
+  background: center center / cover no-repeat; }
+  .reviews__item:hover .reviews__hover-block {
+    opacity: 1;
+    -webkit-transform: scale(1);
+        -ms-transform: scale(1);
+            transform: scale(1); }
+
+.reviews__hover-block {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  -webkit-transform: scale(0.8);
+      -ms-transform: scale(0.8);
+          transform: scale(0.8);
+  -webkit-transition: .5s;
+  -o-transition: .5s;
+  transition: .5s;
+  color: #fff;
+  text-align: left;
+  padding: 50px 20px; }
+
+.reviews__item-text {
+  font-family: "Ubuntu-Light";
+  font-size: 14px;
+  line-height: 1.8;
+  margin-bottom: 15px; }
