@@ -1,11 +1,7 @@
-h1.title {
+.intro__title {
     font-family: "Gagalin-Regular";
     font-size: 72px;
     color: $yellow;
-
-    &--black {
-        color: $black;
-    }
 }
 
 .best__title {
@@ -18,4 +14,10 @@ h1.title {
     font-family: "Gagalin-Regular";
     font-size: 14px;
     margin-bottom: 20px;
+}
+
+.best__content-title {
+    font-family: "Gagalin-Regular";
+    font-size: 72px;
+    color: $black;
 }

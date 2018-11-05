@@ -2,14 +2,11 @@
     background: url("../images/bg/intro-bg.jpg") center center / cover no-repeat;
 }
 
-.intro__container {
-    display: flex;
-    flex: .75;
-}
 
 .intro__content {
     display: flex;
     align-items: center;
+    margin-bottom: 100px;
 }
 
 .intro__text {
