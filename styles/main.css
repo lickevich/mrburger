@@ -72,10 +72,10 @@ body {
           justify-content: center;
   height: 100%; }
   .container--without-align {
-    -webkit-box-pack: initial;
-    -webkit-justify-content: initial;
-        -ms-flex-pack: initial;
-            justify-content: initial; }
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between; }
 
 .wrapper {
   position: relative;
@@ -126,16 +126,6 @@ footer {
 .intro {
   background: url("../images/bg/intro-bg.jpg") center center/cover no-repeat; }
 
-.intro__container {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: .75;
-  -webkit-flex: .75;
-      -ms-flex: .75;
-          flex: .75; }
-
 .intro__content {
   display: -webkit-box;
   display: -webkit-flex;
@@ -144,7 +134,8 @@ footer {
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
-          align-items: center; }
+          align-items: center;
+  margin-bottom: 100px; }
 
 .intro__text {
   padding-top: 100px;
@@ -181,6 +172,9 @@ footer {
       -ms-flex-align: center;
           align-items: center;
   text-transform: uppercase; }
+
+.logo {
+  display: block; }
 
 .nav {
   margin-right: 15px; }
@@ -225,6 +219,18 @@ footer {
   font-size: 13px; }
   .btn--black {
     background: #2f3234; }
+
+.to-next-section {
+  text-align: center;
+  margin-bottom: 35px; }
+
+.to-next-section-btn {
+  border: none;
+  background-color: transparent;
+  background: url(../images/svgicons/arrow-scroll.svg) center center no-repeat;
+  height: 20px;
+  width: 30px;
+  cursor: pointer; }
 
 .best {
   background: url("../images/bg/best-bg.jpg") center center/cover no-repeat; }
@@ -306,12 +312,10 @@ footer {
         -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%); }
 
-h1.title {
+.intro__title {
   font-family: "Gagalin-Regular";
   font-size: 72px;
   color: #f9b43b; }
-  h1.title--black {
-    color: #2f3234; }
 
 .best__title {
   font-family: "Lifehack-Medium";
@@ -322,6 +326,11 @@ h1.title {
   font-family: "Gagalin-Regular";
   font-size: 14px;
   margin-bottom: 20px; }
+
+.best__content-title {
+  font-family: "Gagalin-Regular";
+  font-size: 72px;
+  color: #2f3234; }
 
 .reviews {
   background: black; }
