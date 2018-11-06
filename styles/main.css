@@ -173,9 +173,6 @@ footer {
           align-items: center;
   text-transform: uppercase; }
 
-.logo {
-  display: block; }
-
 .nav {
   margin-right: 15px; }
 
@@ -221,15 +218,15 @@ footer {
     background: #2f3234; }
 
 .to-next-section {
-  text-align: center;
-  margin-bottom: 35px; }
-
-.to-next-section-btn {
   border: none;
   background-color: transparent;
   background: url(../images/svgicons/arrow-scroll.svg) center center no-repeat;
   height: 20px;
   width: 30px;
+  -webkit-align-self: center;
+      -ms-flex-item-align: center;
+          align-self: center;
+  margin-bottom: 35px;
   cursor: pointer; }
 
 .best {
@@ -237,9 +234,6 @@ footer {
 
 .best__content {
   text-align: center; }
-
-.best__content-title {
-  margin-bottom: 35px; }
 
 .best__list {
   display: -webkit-box;
@@ -265,11 +259,6 @@ footer {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex; }
-
-.best__text {
-  font-family: "Ubuntu-Light";
-  font-size: 14px;
-  line-height: 1.8; }
 
 .best__picture-cont {
   margin-bottom: 25px;
@@ -312,25 +301,23 @@ footer {
         -ms-transform: translate(-50%, -50%);
             transform: translate(-50%, -50%); }
 
-.intro__title {
+h1.title {
   font-family: "Gagalin-Regular";
   font-size: 72px;
   color: #f9b43b; }
+  h1.title--black {
+    color: #2f3234;
+    margin-bottom: 35px; }
 
-.best__title {
+h4.title {
   font-family: "Lifehack-Medium";
   font-size: 24px;
   margin-bottom: 12px; }
 
-.reviews__item-title {
+h5.title {
   font-family: "Gagalin-Regular";
   font-size: 14px;
   margin-bottom: 20px; }
-
-.best__content-title {
-  font-family: "Gagalin-Regular";
-  font-size: 72px;
-  color: #2f3234; }
 
 .reviews {
   background: black; }
@@ -376,8 +363,10 @@ footer {
   text-align: left;
   padding: 50px 20px; }
 
-.reviews__item-text {
+p.text {
   font-family: "Ubuntu-Light";
   font-size: 14px;
-  line-height: 1.8;
-  margin-bottom: 15px; }
+  line-height: 1.8; }
+  p.text--white-margin-bottom {
+    color: white;
+    margin-bottom: 15px; }
