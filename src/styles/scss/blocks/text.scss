@@ -1,0 +1,11 @@
+p.text {
+    font-family: "Ubuntu-Light";
+    font-size: 14px;
+    line-height: 1.8;
+
+    &--white-margin-bottom {
+        color: white;
+        margin-bottom: 15px;
+    }
+}
+

@@ -1,23 +1,22 @@
-.intro__title {
+h1.title {
     font-family: "Gagalin-Regular";
     font-size: 72px;
     color: $yellow;
+
+    &--black {
+        color: $black;
+        margin-bottom: 35px;
+    }
 }
 
-.best__title {
+h4.title {
     font-family: "Lifehack-Medium";
     font-size: 24px;
     margin-bottom: 12px;
 }
 
-.reviews__item-title {
+h5.title {
     font-family: "Gagalin-Regular";
     font-size: 14px;
     margin-bottom: 20px;
-}
-
-.best__content-title {
-    font-family: "Gagalin-Regular";
-    font-size: 72px;
-    color: $black;
 }
