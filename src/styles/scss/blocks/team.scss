@@ -18,11 +18,37 @@
     font-size: 14px;
     color: white;
 
-    &:after {
+    &:before {
      content: "";
      border: 5px solid transparent;
-     border-top-color: white;
+     border-top-color: $yellow;
      display: inline-block;
-     vertical-align: middle;   
+     vertical-align: middle;
+     margin-right: 10px;
     }
+}
+
+.team__acco-item {
+    margin-bottom: 30px;
+}
+
+.team__acco-photo {
+    height: 100px;
+    width: 100px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 50%;
+}
+
+.team__acco-content {
+    display: flex;
+    flex-direction: row;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.team__acco-desc {
+    flex: .45;
+    margin-left: 20px;
 }
