@@ -381,7 +381,7 @@ p.text {
     color: white; }
 
 .team {
-  background: url(../images/bg/team-bg.jpg) center center/cover no-repeat;
+  background: url("../images/bg/team-bg.jpg") center center/cover no-repeat;
   position: relative; }
 
 .team__section {
