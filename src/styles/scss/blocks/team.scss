@@ -29,7 +29,7 @@
 }
 
 .team__acco-item {
-    margin-bottom: 30px;
+    margin-bottom: 10px;
 }
 
 .team__acco-photo {
@@ -46,6 +46,8 @@
     flex-direction: row;
     margin-top: 20px;
     margin-left: 20px;
+    height: 0;
+    overflow: hidden;
 }
 
 .team__acco-desc {
