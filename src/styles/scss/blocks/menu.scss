@@ -1,0 +1,46 @@
+.menu {
+    background: url("../images/bg/menu-bg.jpg") center center / cover no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu__acco {
+    display: flex;
+}
+
+.menu__item {
+    display: flex;
+}
+
+.menu__link {
+    background: center center / cover no-repeat;
+    display: flex;
+    align-items: flex-end;
+    width: 5rem;
+}
+
+.menu__title {
+    font-size: 35px;
+    width: 100%;
+    transform: rotate(-90deg);
+    color: white;
+    white-space: nowrap;
+    margin-bottom: 5rem;
+    text-transform: uppercase;
+    font-family: "Gagalin-Regular";
+}
+
+.menu__content {
+    width: 0;
+    background: rgba(47, 50, 52, 0.93);
+    overflow: hidden;
+
+    &--modif {
+        width: 33rem;
+    }
+}
+
+.menu__text {
+    padding: 12% 6% 0 6%;
+}
