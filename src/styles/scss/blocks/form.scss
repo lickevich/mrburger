@@ -53,11 +53,11 @@
 
 .form__radio-input, .form__checkbox-input {
     position: absolute;
-    // clip: rect(0 0 0 0);
-    // width: 1px;
-    // height: 1px;
-    // overflow: hidden;
-    left: -9999px;
+    clip: rect(0 0 0 0);
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    // left: -9999px;
 }
 
 .form__radio-fake {
@@ -97,4 +97,16 @@
     height: 1rem;
     background-color: white;
     position: relative;
+}
+
+.form__checkbox-input:checked + .form__checkbox-fake::before {
+    content: '';
+    background: url(../images/svgicons/check.svg) 50% no-repeat;
+    background-size: contain;
+    width: 0.6875rem;
+    height: 0.5625rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

@@ -1,0 +1,26 @@
+.footer {
+    background: url("../images/bg/footer-bg.jpg") center center / cover no-repeat;
+    position: absolute;
+    bottom: 0;
+    display: flex;
+
+}
+
+.footer__row {
+    flex-direction: row;
+    display: flex;
+}
+
+.footer__cont {
+    width: 50%;
+}
+
+.footer__socials {
+    width: 50%;
+}
+
+.socials__svg {
+    fill: white;
+    width: 20px;
+    height: 20px;
+}
