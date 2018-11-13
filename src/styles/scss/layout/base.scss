@@ -1,3 +1,13 @@
+html {
+  font-size: 16px;
+  @include tablets {
+    font-size: 14px;
+  }
+  @include phones {
+    font-size: 13px;
+  }
+}
+
 html,
 body {
   height: 100%;
@@ -14,8 +24,10 @@ body {
 }
 
 .container {
+  position: relative;
   margin: 0 auto;
-  width: 940px;
+  width: 100%;
+  max-width: 940px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -28,8 +40,8 @@ body {
 
 .wrapper {
   position: relative;
-  width: 100%;
-  min-width: 940px;
+  // width: 100%;
+  // min-width: 940px;
   min-height: 100%;
   overflow: hidden;
 }
