@@ -17,10 +17,27 @@
     display: flex;
 }
 
-.best__picture-cont {
+.best__picture {
     margin-bottom: 25px;
     min-height: 90px;
     display: flex;
+}
+
+.best__svg {
+    width: 100px;
+    height: 90px;
+
+    &--meat {
+        fill: #e35028;
+    }
+    
+    &--hand {
+        fill: #f9b43b;
+    }
+
+    &--natural {
+        fill: #8bc03f;
+    }
 }
 
 .best__desc {

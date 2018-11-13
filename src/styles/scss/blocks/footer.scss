@@ -9,18 +9,63 @@
 .footer__row {
     flex-direction: row;
     display: flex;
+    margin: 10px 0 10px 0;
 }
 
 .footer__cont {
     width: 50%;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
 }
 
 .footer__socials {
+    display: flex;
     width: 50%;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.socials {
+    display: flex;
 }
 
 .socials__svg {
-    fill: white;
+    fill: rgb(98, 99, 100);
     width: 20px;
     height: 20px;
+    transition: .3s; 
+
+    &:hover {
+        fill: white;
+        transition: .3s; 
+    }
+}
+
+.footer__address {
+    color: white;
+    font-family: 'Ubuntu-Light';
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+
+.footer__tel-number {
+    color: $orange;
+    font-family: 'Ubuntu-Bold';
+    font-size: 14px;
+    padding-left: 5px;
+}
+
+.footer__tel-svg {
+    width: 12px;
+    height: 11px;
+    fill: $orange;
+}
+
+.socials__item {
+    padding-left: 20px;
+
+    &:first-child {
+        padding-left: 0;
+    }
 }
