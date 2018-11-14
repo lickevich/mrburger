@@ -21,6 +21,11 @@
             transform: scale(1);
         }
     }
+
+    @include tablets {
+        width: 50%;
+        height: 25%;
+    }
 }
 
 .reviews__hover-block {
@@ -34,7 +39,10 @@
     transform: scale(.8);
     transition: .5s;
     color: #fff;
-
     text-align: left;
     padding: 50px 20px;
+
+    @include tablets {
+        padding: 5px 20px;
+    }
 }

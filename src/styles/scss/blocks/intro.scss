@@ -7,17 +7,34 @@
     display: flex;
     align-items: center;
     margin-bottom: 100px;
-}
 
-.intro__text {
-    padding-top: 100px;
-    margin-left: 13px;
+    @include tablets {
+        flex-direction: column;
+        margin-bottom: 35px;
+    }
 }
 
 .intro__desc {
+    padding-top: 100px;
+    margin-left: 13px;
+
+    @include tablets {
+        padding: 0;
+        margin: 0;
+        text-align: center;
+        width: 80%;
+    }
+}
+
+.intro__text {
     font-family: "Lifehack-Medium";
     font-size: 65px;
     color: #fff;
     line-height: 1;
 }
 
+
+.intro__burger__img {
+    max-width: 100%;
+    max-height: 100%;
+}

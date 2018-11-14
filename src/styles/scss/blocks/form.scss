@@ -5,10 +5,19 @@
 .form-container {
     display: flex;
     justify-content: space-between;
+
+    @include tablets {
+        flex-direction: column;
+        align-items: center;
+    }
 }
 
 .form__col {
     width: 49%;
+
+    @include tablets {
+        width: 70%;
+    }
 }
 
 .form__row {

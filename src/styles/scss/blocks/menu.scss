@@ -7,6 +7,7 @@
 
 .menu__acco {
     display: flex;
+    z-index: 1;
 }
 
 .menu__item {
@@ -29,6 +30,10 @@
     margin-bottom: 5rem;
     text-transform: uppercase;
     font-family: "Gagalin-Regular";
+
+    &--checked {
+        color: $yellow;
+    }
 }
 
 .menu__content {
@@ -36,8 +41,15 @@
     background: rgba(47, 50, 52, 0.93);
     overflow: hidden;
 
-    &--modif {
+    &--checked {
         width: 33rem;
+    }
+
+    @include tablets {
+        
+        &--checked {
+            width: 100%;
+        }
     }
 }
 

@@ -2,6 +2,10 @@
     position: fixed;
     top: 12%;
     right: 4%;
+
+    @include tablets {
+        display: none;
+    }
 }
 
 .point__item {

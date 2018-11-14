@@ -2,10 +2,16 @@
 .to-next-section {
     border: none;
     background-color: transparent;
-    background: url(../images/svgicons/arrow-scroll.svg) center center no-repeat;
+    background: center center no-repeat;
     height: 20px;
     width: 30px;
     align-self: center;
     margin-bottom: 35px;
     cursor: pointer;
+}
+
+.to-next-section-svg {
+    height: 20px;
+    width: 30px;
+    fill: white;
 }

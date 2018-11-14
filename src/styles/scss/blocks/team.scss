@@ -11,6 +11,21 @@
     left: 50%;
     background: rgba(47, 50, 52, 0.93);
     padding: 5% 2% 0 7%;
+
+    @include tablets {
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+.team__acco {
+    @include tablets {
+        text-align: center;
+        margin-left: -10px;
+    }
 }
 
 .team__acco-trigger {
@@ -26,6 +41,23 @@
      vertical-align: middle;
      margin-right: 10px;
     }
+
+    &--checked {
+        color: $yellow;
+    }
+
+    &--checked:before {
+        content: "";
+        border: 5px solid transparent;
+        border-bottom-color: $yellow;
+        display: inline-block;
+        vertical-align: middle;
+        margin-right: 10px;
+    }
+
+    @include tablets {
+        font-size: 24px;
+    }
 }
 
 .team__acco-item {
@@ -39,6 +71,10 @@
     background-repeat: no-repeat;
     background-size: cover;
     border-radius: 50%;
+
+    @include tablets {
+        margin-bottom: 10px;
+    }
 }
 
 .team__acco-content {
@@ -48,9 +84,28 @@
     margin-left: 20px;
     height: 0;
     overflow: hidden;
+
+    &--checked {
+        height: 130px;
+    }
+
+    @include tablets {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &--checked {
+            height: 190px;
+        }
+    }
 }
 
 .team__acco-desc {
-    flex: .45;
+    width: 50%;
     margin-left: 20px;
+
+    @include tablets {
+        width: 75%;
+        margin-left: 0;
+    }
 }

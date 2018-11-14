@@ -36,6 +36,10 @@ body {
   &--without-align {
     justify-content: space-between;
   }
+
+  @include tablets {
+    width: 95%;
+  }
 }
 
 .wrapper {
