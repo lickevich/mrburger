@@ -18,6 +18,10 @@
     @include tablets {
         width: 70%;
     }
+
+    @include phones {
+        width: 100%;
+    }
 }
 
 .form__row {
@@ -52,6 +56,14 @@
 
 .form__input--textarea {
     resize: none;
+}
+
+.form__buttons {
+    @include phones {
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+    }
 }
 
 .form__radio, .form__checkbox {

@@ -15,6 +15,20 @@
     &--black {
         background: $black;
     }
+
+    &--hover-block {
+        @include phones {
+            display: none;
+        }
+    }
+
+    &--phones-size {
+        display: none;
+
+        @include phones {
+            display: initial;
+        }
+    }
 }
 
 .btn-reset {

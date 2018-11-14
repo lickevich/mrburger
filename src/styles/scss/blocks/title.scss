@@ -56,4 +56,12 @@ h5.title {
             text-align: center;
         }
     }
+
+    @include phones {
+        &--hover-block {
+            text-align: center;
+            font-size: 22px;
+            margin-bottom: 20px;
+        }
+    }
 }
