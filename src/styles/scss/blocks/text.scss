@@ -6,6 +6,11 @@ p.text {
     &--white-margin-bottom {
         color: white;
         margin-bottom: 15px;
+        
+        @include tablets {
+            line-height: 1.6;
+            margin-bottom: 5px;
+        }
 
         @include phones {
             display: none;

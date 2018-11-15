@@ -32,6 +32,12 @@
     font-family: "Gagalin-Regular";
     font-size: 14px;
     color: white;
+    transition: 0.3s;
+
+    &:hover {
+        color: $yellow;
+        transition: 0.3s;
+    }
 
     &:before {
      content: "";
@@ -42,19 +48,6 @@
      margin-right: 10px;
     }
 
-    &--checked {
-        color: $yellow;
-    }
-
-    &--checked:before {
-        content: "";
-        border: 5px solid transparent;
-        border-bottom-color: $yellow;
-        display: inline-block;
-        vertical-align: middle;
-        margin-right: 10px;
-    }
-
     @include tablets {
         font-size: 24px;
     }
@@ -62,6 +55,20 @@
 
 .team__acco-item {
     margin-bottom: 10px;
+
+    &--active {
+        .team__acco-content {
+            display: initial;
+        }
+        .team__acco-trigger {
+            color: $yellow;
+
+            &:before {
+                transform: rotate(180deg);
+                // vertical-align: unset;
+            }
+        }
+    }
 }
 
 .team__acco-photo {
