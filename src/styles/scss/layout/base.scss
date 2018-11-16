@@ -26,7 +26,7 @@ body {
 .container {
   position: relative;
   margin: 0 auto;
-  width: 100%;
+  width: 95%;
   max-width: 940px;
   display: flex;
   flex-direction: column;
@@ -36,16 +36,10 @@ body {
   &--without-align {
     justify-content: space-between;
   }
-
-  @include tablets {
-    width: 95%;
-  }
 }
 
 .wrapper {
   position: relative;
-  // width: 100%;
-  // min-width: 940px;
   min-height: 100%;
   overflow: hidden;
 }
