@@ -1,0 +1,51 @@
+.nav-trigger {
+    position: fixed;
+    display: none;
+    top: 37px;
+    right: 25px;
+    z-index: 999;
+
+    @include tablets {
+        display: block;
+    }
+
+    &__link {
+        display: block;
+        width: 25Px;
+        height: 25Px;
+    }
+
+    &__badge {
+        &,
+        &::before,
+        &::after {
+            display: block;
+            height: 4Px;
+            width: 25Px;
+            border-radius: 4px;
+            background-color: #fff;
+        }
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+        }
+        &:before {
+            top: 9Px;
+        }
+        &:after {
+            top: 18Px;
+        }
+    }
+    &.is-active {
+        .nav-trigger__badge {
+            background-color: transparent;
+            &::before {
+                transform: rotate(45deg);
+            }
+            &::after {
+                transform: translateY(-9Px) rotate(-45deg);
+            }
+        }
+    }
+}

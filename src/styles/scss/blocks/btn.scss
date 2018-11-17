@@ -43,7 +43,7 @@
     outline: none;
 
     &:hover {
-        background-color: rgb(47, 50, 52);
+        background-color: $grey;
         transition: .3s;        
     }
 }
