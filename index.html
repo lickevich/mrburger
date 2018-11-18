@@ -21,7 +21,9 @@
         <div class="container container--without-align">
           <header class="header">
             <div class="logo">
-              <img src="./images/logo/logo.svg" alt="" class="logo__svg">
+              <a href="#" class="logo__link">
+                <img src="./images/logo/logo.svg" alt="" class="logo__img">
+              </a>
             </div>
             <div class="header__buttons">
               <nav class="nav">
@@ -43,12 +45,12 @@
                   <img src="./images/content/intro/burger_main.png" alt="" class="intro__burger__img">
                 </div>
                 <div class="intro__desc">
-                  <h1 class="title">мы делаем</h1>
+                  <h2 class="title">мы делаем</h2>
                   <p class="intro__text">натуральные бургеры</p>
                 </div>
             </div>
-            <button type="button" class="to-next-section">
-              <svg class="to-next-section-svg">
+            <button type="button" class="arrow-scroll">
+              <svg class="arrow-scroll-svg">
                 <use xlink:href='./images/symbol/sprite.svg#arrow-scroll'></use>
             </svg>
             </button>
@@ -60,7 +62,7 @@
       <section class="best section">
         <div class="container">
           <div class="best__content">
-              <h1 class="title title--best">мы лучшие</h1>
+              <h2 class="title title--best">мы лучшие</h2>
                 <ul class="best__list">
                   <li class="best__item">
                     <div class="best__picture">
@@ -100,11 +102,74 @@
         </div>
       </section>
 
+<!-- ----------------SECTION BURGERS----------------- -->
+
+      <section class="burgers section">
+        <div class="container container--center">
+          <div class="slider">
+            <div class="slider__control">
+              <button class="scroll-btn scroll-btn--prev">
+                <svg class="arrow-scroll-svg arrow-scroll-svg--left">
+                    <use xlink:href='./images/symbol/sprite.svg#arrow-scroll'></use>
+                </svg>
+              </button>
+              <button class="scroll-btn scroll-btn--next">
+                  <svg class="arrow-scroll-svg arrow-scroll-svg--right">
+                      <use xlink:href='./images/symbol/sprite.svg#arrow-scroll'></use>
+                  </svg>
+                </button>
+            </div>
+            <div class="slider__frame">
+              <ul class="slider__list">
+                <li class="slider__item">
+                  <div class="burger">
+                    <div class="burger__photo">
+                      <img src="./images/content/burgers-slider/dark_beef.png" alt="" class="burger__photo-img">
+                    </div>
+                    <div class="burger__desc">
+                      <h2 class="title title--burgers">DARK BEEF BURGER1</h2>
+                      <div class="burger__text">
+                        <p>Ваш старый добрый знакомый,
+                          с рубленым бифштексом из 100% говядины,
+                          тремя кусочками нежнейшего сыра эмменталь,
+                          двумя помидорами, луком, салатом и соусом
+                          гриль теперь с добавлением экзотического 
+                          соуса чураско.</p>
+                      </div>
+                      <div class="burger__order">
+                        <div class="burger__price">
+                          <span class="burger__price-num">500</span>
+                          <span class="burger__price-text">рублей</span>
+                        </div>
+                        <a href="#" class="btn">заказать</a>
+                      </div>
+                    </div>
+                    <div class="burger__budge burger__budge--ingred">
+                      <svg class="burger__ingred-svg">
+                          <use xlink:href='./images/symbol/sprite.svg#burger'></use>
+                      </svg>
+                      <span class="burger__budge-text">состав</span>
+                    </div>
+                    <div class="burger__budge burger__budge--calor">
+                      <svg class="burger__calor-svg">
+                          <use xlink:href='./images/symbol/sprite.svg#kkal'></use>
+                      </svg>
+                      <span class="burger__budge-text burger__budge-text--op burger__budge-text--num">1200</span>
+                      <span class="burger__budge-text burger__budge-text--op">ккал</span>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
 <!-- ----------------SECTION TEAM----------------- -->
 
       <section class="team section">
           <div class="team__section">
-            <h1 class="title title--team">команда</h1>
+            <h2 class="title title--team">команда</h2>
             <ul class="team__acco">
               <li class="team__acco-item">
                 <a href="#" class="team__acco-trigger">дэниэл редклиф</a>
@@ -153,7 +218,7 @@
 <!-- ----------------SECTION MENU----------------- -->
 
       <section class="menu section">
-          <h1 class="title title--menu">меню</h1>
+          <h2 class="title title--menu">меню</h2>
           <ul class="menu__acco">
             <li class="menu__item menu__item--active">
               <a href="#" class="menu__link" style="background-image: url(./images/bg/menu-bg--1.jpg);">
@@ -261,7 +326,7 @@
 
       <section class="form section">
         <div class="container">
-          <h1 class="title title--form">закажите доставку</h1>
+          <h2 class="title title--form">закажите доставку</h2>
           <form action="" class="form-container">
             <div class="form__col">
               <div class="form__row">
@@ -392,7 +457,9 @@
     </div>
   </div>
 
-      <nav class="points">
+<!-- ----------------POINTS----------------- -->
+
+      <nav class="nav-points">
         <ul class="points__list">
           <li class="point__item"><a href="#" class="point__link point__link--active"></a></li>
           <li class="point__item"><a href="#" class="point__link"></a></li>
@@ -406,20 +473,51 @@
         </ul>
       </nav>
 
-      <nav class="nav-mobile">
-        <div class="nav-mobile__menu">
+<!-- ----------------NAV-TRIGGER----------------- -->
+
+      <div class="nav-trigger">
+        <a href="#" class="nav-trigger__link">
+          <span class="nav-trigger__badge"></span>
+        </a>
+      </div>
+
+<!-- ----------------NAV-MOBILE----------------- -->
+
+      <div class="nav-mobile">
+        <nav class="nav-mobile__menu">
           <ul class="nav-mobile__list">
-            <li class="nav-mobile__item"><a href="#" class="nav-mobile__link"></a></li>
-            <li class="nav-mobile__item"><a href="#" class="nav-mobile__link"></a></li>
-            <li class="nav-mobile__item"><a href="#" class="nav-mobile__link"></a></li>
-            <li class="nav-mobile__item"><a href="#" class="nav-mobile__link"></a></li>
-            <li class="nav-mobile__item"><a href="#" class="nav-mobile__link"></a></li>
-            <li class="nav-mobile__item"><a href="#" class="nav-mobile__link"></a></li>
-            <li class="nav-mobile__item"><a href="#" class="nav-mobile__link"></a></li>
-            <li class="nav-mobile__item"><a href="#" class="nav-mobile__link"></a></li>
+            <li class="nav-mobile__item">
+              <a href="#" class="nav-mobile__link">главная</a>
+            </li>
+            <li class="nav-mobile__item">
+              <a href="#" class="nav-mobile__link">о нас</a>
+            </li>
+            <li class="nav-mobile__item">
+              <a href="#" class="nav-mobile__link">бургеры</a>
+            </li>
+            <li class="nav-mobile__item">
+              <a href="#" class="nav-mobile__link">команда</a>
+            </li>
+            <li class="nav-mobile__item">
+              <a href="#" class="nav-mobile__link">меню</a>
+            </li>
+            <li class="nav-mobile__item">
+              <a href="#" class="nav-mobile__link">отзывы</a>
+            </li>
+            <li class="nav-mobile__item">
+              <a href="#" class="nav-mobile__link">как мы работаем</a>
+            </li>
+            <li class="nav-mobile__item">
+              <a href="#" class="nav-mobile__link">контакты</a>
+            </li>
           </ul>
+        </nav>
+        <div class="logo">
+          <a href="#" class="logo__link">
+              <img src="./images/logo/logo.svg" alt="" class="logo__img">
+          </a>
         </div>
-      </nav>
+      </div>
 </body>
 
 </html>
