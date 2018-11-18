@@ -1,4 +1,4 @@
-h1.title {
+h2.title {
     font-family: "Gagalin-Regular";
     font-size: 72px;
     color: $yellow;
@@ -9,6 +9,12 @@ h1.title {
 
     &--best {
         color: $black;
+        margin-bottom: 35px;
+    }
+
+    &--burgers {
+        color: white;
+        line-height: .9;
         margin-bottom: 35px;
     }
 

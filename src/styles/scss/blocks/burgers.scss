@@ -1,0 +1,183 @@
+.burgers {
+    background: linear-gradient(to top, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%);
+    position: relative;
+  }
+
+.burger {
+      display: flex;
+      align-items: center;
+      padding: 0 15px;
+      position: relative;
+
+      @include tablets {
+          flex-direction: column;
+      }
+}
+
+.burger__photo {
+    padding: 80px 0;
+    flex: 1;
+
+    &-img {
+        max-width: 100%;
+
+        @include tablets {
+            max-width: 80%;
+            margin-bottom: 20px;
+        }
+    }
+
+    @include tablets {
+        flex: auto;
+        padding-bottom: 0;
+        text-align: center;
+    }
+}
+
+.burger__desc {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      margin-left: 10px;
+
+      @include tablets {
+          flex: auto;
+          text-align: center;
+          max-width: 75%;
+      }
+}
+
+.burger__text {
+    font-size: 14px;
+    line-height: 1.8;
+    color: white;
+}
+
+.burger__order {
+    display: flex;
+    align-items: baseline;
+
+    @include tablets {
+        justify-content: center;
+    }
+}
+
+.burger__price {
+    font-family: "Gagalin-Regular";
+    color: $orange;
+    margin-right: 40px;
+
+    &-num {
+        font-size: 62px;
+    }
+    &-text {
+        font-size: 32px;
+    }
+}
+
+.scroll-btn {
+    position: absolute;
+    top: 50%;
+    z-index: 99;
+    padding: 90px 20px;
+    transform: translateY(-50%);
+
+    &--prev {
+        left: -30px;;
+    }
+
+    &--next {
+        right: -30px;
+    }
+}
+
+.arrow-scroll-svg {
+    &--left {
+        transform: rotate(90deg);
+    }
+    &--right {
+        transform: rotate(-90deg);
+    }
+}
+
+.burger__budge {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    &--ingred {
+        top: 0;
+        padding: 14px 23px;
+        background-color: #eb8c38;
+        border-radius: 5px;
+        text-transform: uppercase;
+        font-family: "Gagalin-Regular";
+        cursor: pointer;
+        transition: .3s;
+
+        &:hover {
+            background-color: #e45028;
+            transition: .3s;
+        }
+
+        @include tablets {
+            left: 20%;
+            top: 0;
+            font-size: 14px;
+        }
+
+        @include phones {
+            left: 7%;
+            top: -4%;
+        }
+    }
+
+    &--calor {
+        bottom: 35px;
+
+        @include tablets {
+            right: 23%;
+            top: 0;
+            bottom: 0;
+        }
+
+        @include phones {
+            right: 8%;
+            top: -4%;
+        }
+    }
+
+    &-text {
+        color: white;
+        font-family: "Gagalin-Regular";
+
+        &--op {
+            opacity: 0.5;
+        }
+
+        &--num {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 20px;
+
+            @include tablets{
+                top: 5%;
+            }
+        }
+    }
+}
+
+.burger__ingred-svg {
+    width: 42px;
+    height: 42px;
+    fill: white;
+}
+
+.burger__calor-svg {
+    width: 60px;
+    height: 60px;
+    fill: rgba(255, 255, 255, 0.5);
+}
