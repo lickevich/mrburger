@@ -309,7 +309,8 @@ footer {
 .scroll-btn {
   background: transparent;
   border: none;
-  cursor: pointer; }
+  cursor: pointer;
+  outline: none; }
 
 .arrow-scroll {
   border: none;
@@ -1061,10 +1062,10 @@ p.text {
   .socials__item:first-child {
     padding-left: 0; }
 
-.map {
+.contacts {
   position: relative; }
 
-.map__block {
+.contacts__block {
   background: url("../images/bg/map-bg.jpg") center center/cover no-repeat;
   width: 100%;
   height: 100%; }
@@ -1156,7 +1157,7 @@ p.text {
 .nav-trigger {
   position: fixed;
   display: none;
-  top: 2.3125rem;
+  top: 1.9375rem;
   right: 1.5625rem;
   z-index: 999; }
   @media (max-width: 768px) {
