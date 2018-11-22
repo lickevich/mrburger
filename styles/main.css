@@ -1094,7 +1094,10 @@ p.text {
   .nav-mobile--active {
     background-color: rgba(47, 50, 52, 0.93);
     top: 0;
-    bottom: 0; }
+    bottom: 0;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; }
     .nav-mobile--active .logo {
       position: fixed;
       top: 0.625rem;
@@ -1177,13 +1180,13 @@ p.text {
     top: 9Px; }
   .nav-trigger__badge:after {
     top: 18Px; }
-  .nav-trigger.is-active .nav-trigger__badge {
+  .nav-trigger--active .nav-trigger__badge {
     background-color: transparent; }
-    .nav-trigger.is-active .nav-trigger__badge::before {
+    .nav-trigger--active .nav-trigger__badge::before {
       -webkit-transform: rotate(45deg);
           -ms-transform: rotate(45deg);
               transform: rotate(45deg); }
-    .nav-trigger.is-active .nav-trigger__badge::after {
+    .nav-trigger--active .nav-trigger__badge::after {
       -webkit-transform: translateY(-9Px) rotate(-45deg);
           -ms-transform: translateY(-9Px) rotate(-45deg);
               transform: translateY(-9Px) rotate(-45deg); }
