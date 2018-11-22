@@ -1,12 +1,13 @@
 const navTrigger = document.querySelector('.nav-trigger');
+const navMobile = document.querySelector('.nav-mobile');
+const navMobileLink = document.querySelector('.nav-mobile__link');
 
 navTrigger.addEventListener('click', function(e) {
           e.preventDefault();
-          const navMobile = document.querySelector('.nav-mobile');
           navMobile.classList.toggle('nav-mobile--active');
           navTrigger.classList.toggle('nav-trigger--active');        
 });
 
-// const menuItem = document.querySelector('menu_item');
-
-// menuItem.addEventListener('click')
+navMobileLink.addEventListener('click', function(e) {
+          e.preventDefault();
+});
