@@ -37,7 +37,7 @@
             top: 18Px;
         }
     }
-    &.is-active {
+    &--active {
         .nav-trigger__badge {
             background-color: transparent;
             &::before {
