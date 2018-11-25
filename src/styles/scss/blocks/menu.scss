@@ -8,21 +8,21 @@
 .menu__acco {
     display: flex;
     z-index: 99;
+    transition: transform 0.8s;
 }
 
 .menu__item {
     display: flex;
 
     &--active {
-        .menu__content {
-            width: 33rem;
 
-            @include tablets {
-                width: 100%;
-            }
-        }
         .menu__title {
             color: $yellow;
+        }
+
+        .menu__text {
+            opacity: 1;
+            transition-delay: 0.7s;
         }
     }
 }
@@ -55,8 +55,10 @@
     width: 0;
     background: rgba($grey, 0.93);
     overflow: hidden;
+    transition: width 0.8s;
 }
 
 .menu__text {
     padding: 12% 6% 0 6%;
+    opacity: 0;
 }
