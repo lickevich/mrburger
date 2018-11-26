@@ -4,11 +4,11 @@ function mobileMenu() {
 
     const navTrigger = document.querySelector('.nav-trigger');
     const navMobile = document.querySelector('.nav-mobile');
-    const navMobileItem = document.querySelectorAll('.nav-mobile__item');
+    const navMobileItems = document.querySelectorAll('.nav-mobile__item');
 
     navTrigger.addEventListener('click', toggleClass);
      
-    for (const iterator of navMobileItem) {
+    for (const iterator of navMobileItems) {
         iterator.addEventListener('click', toggleClass)
     }
 
@@ -90,25 +90,26 @@ function accordeonMenu() {
 accordeonMenu();
 
 // АККОРДЕОН КОМАНДА
-
-function accordeonTeam() {
-    const teamItems = document.querySelectorAll('.team__acco-item');
-    const teamAccoTrigger = document.querySelector('.team__acco-trigger')
-
-    teamAccoTrigger.addEventListener('click', activeClass);
+    const accordElements = document.querySelector('.team__acco');
+    createAccord(accordElements);
     
-    for (const iterator of teamItems) {
-        iterator.addEventListener('click', activeClass)
-    }
+    function createAccord(element) {
+        
+    let activeCont = document.querySelector('.team__acco-content--active');
 
-    function activeClass(e) {
-        e.preventDefault();
-        if (teamItems.classList.contains('team__acco-item--active')) {
-            teamItems.classList.remove('team__acco-item--active');
-        } else {
-            teamItems.classList.add('team__acco-item--active');
+    element.addEventListener('click', function (event) {
+        event.preventDefault();
+        
+        const trigger = event.target;
+
+        if (trigger.classList.contains('team__acco-trigger')) {
+            
+            if (activeCont) {
+                activeCont.classList.remove('team__acco-content--active');
+            }
+
+            activeCont = trigger.nextElementSibling;
+            activeCont.classList.add('team__acco-content--active');
         }
-    }
+    });
 }
-
-accordeonTeam();

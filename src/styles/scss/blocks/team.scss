@@ -55,27 +55,6 @@
 
 .team__acco-item {
     margin-bottom: 10px;
-
-    &--active {
-        margin-bottom: 0;
-
-        .team__acco-content {
-            height: 130px;
-
-            @include tablets {
-                height: 230px;
-                margin: 0;
-                justify-content: center;
-            }
-        }
-        .team__acco-trigger {
-            color: $yellow;
-
-            &:before {
-                transform: rotate(180deg);
-            }
-        }
-    }
 }
 
 .team__acco-photo {
@@ -103,6 +82,24 @@
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+    &--active {
+
+        height: 130px;
+
+        @include tablets {
+            height: 230px;
+            margin: 0;
+            justify-content: center;
+        }
+        .team__acco-trigger {
+            color: $yellow;
+
+            &:before {
+                transform: rotate(180deg);
+            }
+        }
     }
 }
 
