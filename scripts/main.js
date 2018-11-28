@@ -106,10 +106,13 @@ accordeonMenu();
             
             if (activeCont) {
                 activeCont.classList.remove('team__acco-content--active');
-            }
+            } 
 
             activeCont = trigger.nextElementSibling;
             activeCont.classList.add('team__acco-content--active');
         }
     });
 }
+
+// СЛАЙДЕР В СЕКЦИИ БУРГЕРЫ
+
