@@ -28,6 +28,30 @@
     }
 }
 
+.team__acco-item {
+
+    &.is-active {
+
+        .team__acco-content {
+            height: 130px;
+            transition: 0.5s;
+
+            @include tablets {
+                height: 230px;
+                margin: 0;
+                justify-content: center;
+            }
+        }
+        .team__acco-trigger {
+            color: $yellow;
+
+            &:before {
+                transform: rotate(180deg);
+            }
+        }
+    }
+}
+
 .team__acco-trigger {
     font-family: "Gagalin-Regular";
     font-size: 14px;
@@ -77,29 +101,12 @@
     margin-left: 20px;
     height: 0;
     overflow: hidden;
+    transition: 0.5s;
 
     @include tablets {
         display: flex;
         flex-direction: column;
         align-items: center;
-    }
-
-    &--active {
-
-        height: 130px;
-
-        @include tablets {
-            height: 230px;
-            margin: 0;
-            justify-content: center;
-        }
-        .team__acco-trigger {
-            color: $yellow;
-
-            &:before {
-                transform: rotate(180deg);
-            }
-        }
     }
 }
 

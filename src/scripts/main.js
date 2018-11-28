@@ -90,26 +90,32 @@ function accordeonMenu() {
 accordeonMenu();
 
 // АККОРДЕОН КОМАНДА
-    const accordElements = document.querySelector('.team__acco');
-    createAccord(accordElements);
-    
-    function createAccord(element) {
-        
-    let activeCont = document.querySelector('.team__acco-content--active');
+function accordeonTeam() {
+    const teamItems = document.querySelectorAll('.team__acco-item');
+    const teamAccord = document.querySelector('.team__acco');
 
-    element.addEventListener('click', function (event) {
+    teamAccord.addEventListener('click', function(event) {
         event.preventDefault();
-        
-        const trigger = event.target;
 
-        if (trigger.classList.contains('team__acco-trigger')) {
-            
-            if (activeCont) {
-                activeCont.classList.remove('team__acco-content--active');
-            } 
+        const target = event.target;
 
-            activeCont = trigger.nextElementSibling;
-            activeCont.classList.add('team__acco-content--active');
+        if (target.classList.contains('team__acco-trigger')) {
+            const item = target.parentNode;
+
+            for (const iterator of teamItems) {
+                if (iterator !== item) {
+                    iterator.classList.remove('is-active');
+                }
+            }
+
+            if (item.classList.contains('is-active')) {
+                item.classList.remove('is-active');
+            } else {
+                item.classList.add('is-active');
+            }
         }
+
     });
 }
+accordeonTeam();
+

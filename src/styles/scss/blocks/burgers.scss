@@ -3,10 +3,6 @@
     position: relative;
 }
 
-.slider__list {
-    display: flex;
-}
-
 .burger {
       display: flex;
       align-items: center;
@@ -79,30 +75,7 @@
     }
 }
 
-.scroll-btn {
-    position: absolute;
-    top: 50%;
-    z-index: 99;
-    padding: 90px 20px;
-    transform: translateY(-50%);
 
-    &--prev {
-        left: -30px;;
-    }
-
-    &--next {
-        right: -30px;
-    }
-}
-
-.arrow-scroll-svg {
-    &--left {
-        transform: rotate(90deg);
-    }
-    &--right {
-        transform: rotate(-90deg);
-    }
-}
 
 .burger__budge {
     position: absolute;
@@ -133,14 +106,16 @@
         }
 
         @include tablets {
-            left: 20%;
+            left: 15%;
             top: 0;
             font-size: 14px;
         }
 
         @include phones {
             left: 7%;
-            top: -4%;
+            top: 0;
+            font-size: 12px;
+            padding: 11px 20px;
         }
     }
 
@@ -148,14 +123,14 @@
         bottom: 35px;
 
         @include tablets {
-            right: 23%;
             top: 0;
-            bottom: 0;
+            right: 15%;
         }
 
         @include phones {
-            right: 8%;
-            top: -4%;
+            right: 7%;
+            top: 0;
+            font-size: 12px;
         }
     }
 

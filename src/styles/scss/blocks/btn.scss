@@ -48,9 +48,34 @@
     }
 }
 
+// Burgers menu
+
 .scroll-btn {
+    position: absolute;
+    top: 50%;
+    z-index: 99;
+    padding: 90px 20px;
+    transform: translateY(-50%);
+
     background: transparent;
     border: none;
     cursor: pointer;
     outline: none;
+
+    &--prev {
+        left: -30px;;
+    }
+
+    &--next {
+        right: -30px;
+    }
+}
+
+.arrow-scroll-svg {
+    &--left {
+        transform: rotate(90deg);
+    }
+    &--right {
+        transform: rotate(-90deg);
+    }
 }

@@ -1,0 +1,41 @@
+.slider {
+    position: relative;
+    display: flex;
+}
+
+.slider__frame {
+    overflow: hidden;
+    display: flex;
+}
+
+.slider__list {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    // left: -100%;
+    // transform: translateX(-100%);
+
+    // &.is-reverse {
+    //     transform: translateX(100%);
+    // }
+
+    // &.is-move {
+    //     transform: none;
+    //     transition: transform 1s;
+    // }
+}
+
+.slider__item {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-grow: 1;
+    flex-shrink: 0;
+    flex-basis: 100%;
+    // order: 2;
+
+    // &.is-one {
+    //     order: 1;
+    // }
+}
