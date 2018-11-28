@@ -119,3 +119,24 @@ function accordeonTeam() {
 }
 accordeonTeam();
 
+
+// СЛАЙДЕР В СЕКЦИИ БУРГЕРЫ
+function sliderBurger() {
+    const next = document.querySelector('.scroll-btn--next');
+    const prev = document.querySelector('.scroll-btn--prev');
+    const list = document.querySelector('.slider__list');
+    const items = list.querySelectorAll('slider__item');
+
+    next.addEventListener('click', moveNext);
+    prev.addEventListener('click', movePrev);
+
+    let num = 2;
+
+    function moveNext() {
+        num++
+        if (num > items.lenght) {
+            num = 1;
+        }
+    }
+}
+sliderBurger();
