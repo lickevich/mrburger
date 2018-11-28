@@ -1,7 +1,11 @@
 .burgers {
     background: linear-gradient(to top, #f9b43b 0%, #eb8c38 48%, #f9b43b 74%);
     position: relative;
-  }
+}
+
+.slider__list {
+    display: flex;
+}
 
 .burger {
       display: flex;
@@ -106,6 +110,13 @@
     flex-direction: column;
     align-items: center;
 
+    &:hover {
+        .burger__dropdown {
+            display: initial;
+            transition: 1s;
+        }
+    }
+
     &--ingred {
         top: 0;
         padding: 14px 23px;
@@ -180,4 +191,56 @@
     width: 60px;
     height: 60px;
     fill: rgba(255, 255, 255, 0.5);
+}
+
+.burger__dropdown {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    background-color: white;
+    border-radius: 5px;
+    display: none;
+    transition: 1s;
+    cursor: initial;
+
+    &:hover {
+        display: initial;
+        transition: 1s;
+    }
+}
+
+.burger__ingredients {
+    padding: 15px 20px;
+    width: 270px;
+}
+
+.ingredients__list {
+    display: flex;
+    flex-direction: column;
+}
+
+.ingredient__item {
+    display: flex;
+    align-items: center;
+    font-family: "Ubuntu-Medium";
+    font-size: 14px;
+    margin-bottom: 3px;
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.ingredient__svg {
+    width: 45px;
+}
+
+.ingredient__text {
+    text-transform: none;
+    margin-left: 35px;
+}
+
+.ingredient__weight {
+    margin-left: auto;
+    text-transform: lowercase;
 }
