@@ -1,5 +1,4 @@
 // МОБИЛЬНОЕ МЕНЮ
-
 function mobileMenu() {
 
     const navTrigger = document.querySelector('.nav-trigger');
@@ -23,7 +22,6 @@ function mobileMenu() {
 mobileMenu();
 
 // АККОРДЕОН МЕНЮ
-
 function accordeonMenu() {
     const menuItems = document.querySelectorAll('.menu__item');
     const menuAccord = document.querySelector('.menu__acco');
@@ -152,8 +150,8 @@ function sliderBurger() {
     }
     function setOrder() {
         let key = num;
-        for (const i of items) {
-            i.style.order = key;
+        for (const iterator of items) {
+            iterator.style.order = key;
             key++
             if (key > items.length) {
                 key = 1;
@@ -168,3 +166,52 @@ function sliderBurger() {
     }
 }
 sliderBurger();
+
+// СЕКЦИЯ ФОРМА. ОТПРАВКА НА СЕРВЕР
+const myForm = document.querySelector('#myForm');
+const sendButton = document.querySelector('#sendButton');
+
+sendButton.addEventListener('click', function(event) {
+    event.preventDefault();
+
+    if (validateForm(myForm)) {
+        console.log('все ок');
+    }
+});
+
+function validateForm(form) {
+    let valid = true;
+
+    if (!validateField(form.elements.name)) {
+        valid = false;
+    }
+    if (!validateField(form.elements.phone)) {
+        valid = false;
+    }
+    if (!validateField(form.elements.street)) {
+        valid = false;
+    }
+    if (!validateField(form.elements.house)) {
+        valid = false;
+    }
+    if (!validateField(form.elements.building)) {
+        valid = false;
+    }
+    if (!validateField(form.elements.floor)) {
+        valid = false;
+    }
+
+    return valid;
+}
+
+function validateField(field) {
+    if (!field.checkValidity()) {
+        field.nextElementSibling.textContent = field.validationMessage;
+
+        return false;
+    } else {
+        field.nextElementSibling.textContent = '';
+
+        return true;
+    }
+}
