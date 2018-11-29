@@ -175,7 +175,22 @@ sendButton.addEventListener('click', function(event) {
     event.preventDefault();
 
     if (validateForm(myForm)) {
-        console.log('все ок');
+        const formData = {
+            name: myForm.elements.name.value,
+            phone: myForm.elements.phone.value,
+            comment: myForm.elements.comment.value,
+            to: 'test@test.com'
+        };
+
+        const xhr = new XMLHttpRequest();
+        xhr.responseType = 'json';
+        xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
+        xhr.send(JSON.stringify(formData));
+        xhr.addEventListener('load', () => {
+            if (xhr.response.status) {
+                console.log('все хорошо');
+            }
+        });
     }
 });
 
