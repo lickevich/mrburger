@@ -197,6 +197,9 @@ function validateForm(form) {
     if (!validateField(form.elements.building)) {
         valid = false;
     }
+    if (!validateField(form.elements.flat)) {
+        valid = false;
+    }
     if (!validateField(form.elements.floor)) {
         valid = false;
     }

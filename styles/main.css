@@ -986,6 +986,11 @@ p.text {
       -ms-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%); }
 
+.error {
+  color: #d1273a;
+  font-size: 0.75rem;
+  font-family: "Ubuntu"; }
+
 .footer {
   background: url("../images/bg/footer-bg.jpg") center center/cover no-repeat;
   position: absolute;
