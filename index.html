@@ -222,10 +222,10 @@
                 <li class="slider__item">
                     <div class="burger">
                       <div class="burger__photo">
-                        <img src="./images/content/burgers-slider/dark_beef.png" alt="" class="burger__photo-img">
+                        <img src="./images/content/burgers-slider/Chiken burger.png" alt="" class="burger__photo-img">
                       </div>
                       <div class="burger__desc">
-                        <h2 class="title title--burgers">DARK BEEF BURGER1</h2>
+                        <h2 class="title title--burgers">CHIKEN BURGER2</h2>
                         <div class="burger__text">
                           <p>Ваш старый добрый знакомый,
                             с рубленым бифштексом из 100% говядины,
@@ -320,10 +320,10 @@
                 <li class="slider__item">
                     <div class="burger">
                       <div class="burger__photo">
-                        <img src="./images/content/burgers-slider/dark_beef.png" alt="" class="burger__photo-img">
+                        <img src="./images/content/burgers-slider/NYC-Diner-Bacon-Cheeseburger.png" alt="" class="burger__photo-img">
                       </div>
                       <div class="burger__desc">
-                        <h2 class="title title--burgers">DARK BEEF BURGER1</h2>
+                        <h2 class="title title--burgers">BACONE CHEESEBURGER BURGER3</h2>
                         <div class="burger__text">
                           <p>Ваш старый добрый знакомый,
                             с рубленым бифштексом из 100% говядины,
@@ -418,10 +418,10 @@
                 <li class="slider__item">
                     <div class="burger">
                       <div class="burger__photo">
-                        <img src="./images/content/burgers-slider/dark_beef.png" alt="" class="burger__photo-img">
+                        <img src="./images/content/burgers-slider/Spicy_Shrimp_Burger.png" alt="" class="burger__photo-img">
                       </div>
                       <div class="burger__desc">
-                        <h2 class="title title--burgers">DARK BEEF BURGER1</h2>
+                        <h2 class="title title--burgers">SHRIMP BURGER4</h2>
                         <div class="burger__text">
                           <p>Ваш старый добрый знакомый,
                             с рубленым бифштексом из 100% говядины,
@@ -513,13 +513,13 @@
                       </div>
                     </div>
                 </li>
-                <li class="slider__item">
+                <li class="slider__item is-one">
                     <div class="burger">
                       <div class="burger__photo">
-                        <img src="./images/content/burgers-slider/dark_beef.png" alt="" class="burger__photo-img">
+                        <img src="./images/content/burgers-slider/burger_sandwich_PNG4124.png" alt="" class="burger__photo-img">
                       </div>
                       <div class="burger__desc">
-                        <h2 class="title title--burgers">DARK BEEF BURGER1</h2>
+                        <h2 class="title title--burgers">SANDWICH BURGER5</h2>
                         <div class="burger__text">
                           <p>Ваш старый добрый знакомый,
                             с рубленым бифштексом из 100% говядины,
@@ -779,40 +779,40 @@
       <section class="form section">
         <div class="container">
           <h2 class="title title--form">закажите доставку</h2>
-          <form action="" class="form-container">
+          <form class="form-container" id="myForm">
             <div class="form__col">
               <div class="form__row">
                 <label class="form__block">
                   <span class="form__block-title">Имя</span>
-                  <input type="text" class="form__input">
+                  <input type="text" placeholder="Роман" class="form__input" name="name" required>
                 </label>
                 <label class="form__block">
                   <span class="form__block-title">Телефон</span>
-                  <input type="text" class="form__input">
+                  <input type="text" class="form__input" name="phone" placeholder="8981234567" required>
                 </label>
               </div>
               <div class="form__row">
                 <label class="form__block">
                   <span class="form__block-title">Улица</span>
-                  <input type="text" class="form__input">
+                  <input type="text" class="form__input" name="street" placeholder="Пушкина" required>
                 </label>
               </div>
               <div class="form__row">
                 <label class="form__block">
                   <span class="form__block-title">Дом</span>
-                  <input type="text" class="form__input">
+                  <input type="text" class="form__input" name="house" required>
                 </label>
                 <label class="form__block">
                   <span class="form__block-title">Корпус</span>
-                  <input type="text" class="form__input">
+                  <input type="text" class="form__input" name="building" required>
                 </label>
                 <label class="form__block">
                   <span class="form__block-title">Квартира</span>
-                  <input type="text" class="form__input">
+                  <input type="number" min="1" class="form__input" name="flat" required>
                 </label>
                 <label class="form__block">
                   <span class="form__block-title">Этаж</span>
-                  <input type="text" class="form__input">
+                  <input type="number" max="100" class="form__input" name="floor" required>
                 </label>
               </div>
             </div>
@@ -820,7 +820,7 @@
               <div class="form__row">
                 <label class="form__block">
                   <span class="form__block-title">Комментарий</span>
-                  <textarea name="" id="" rows="6" class="form__input form__input--textarea"></textarea>
+                  <textarea name="comment" placeholder="Ваши пожелания..." rows="6" class="form__input form__input--textarea"></textarea>
                 </label>
               </div>
               <div class="form__buttons">
@@ -831,20 +831,20 @@
                     <span class="form__block-title form__block-title--buttons">Потребуется здача</span>
                   </label>
                   <label class="form__radio">
-                      <input type="radio" name="payment" value="cash" class="form__radio-input" checked>
+                      <input type="radio" name="payment" value="card" class="form__radio-input" checked>
                       <div class="form__radio-fake"></div>
                       <span class="form__block-title form__block-title--buttons">Оплата по карте</span>
                   </label>
                 </div>
                 <div class="form__row">
                   <label class="form__checkbox">
-                    <input type="checkbox" name="callback" value="1" class="form__checkbox-input" checked>
+                    <input type="checkbox" name="callback" class="form__checkbox-input" checked>
                     <div class="form__checkbox-fake"></div>
                     <span class="form__block-title form__block-title--buttons">Не перезванивать</span>
                   </label>
                 </div>
                 <div class="form__row">
-                  <a href="" class="btn">заказать</a>
+                  <a href="#" class="btn" id="sendButton">заказать</a>
                   <button type="reset" class="btn-reset">Очистить</button>
                 </div>
               </div>

@@ -1,5 +1,4 @@
 // МОБИЛЬНОЕ МЕНЮ
-
 function mobileMenu() {
 
     const navTrigger = document.querySelector('.nav-trigger');
@@ -23,7 +22,6 @@ function mobileMenu() {
 mobileMenu();
 
 // АККОРДЕОН МЕНЮ
-
 function accordeonMenu() {
     const menuItems = document.querySelectorAll('.menu__item');
     const menuAccord = document.querySelector('.menu__acco');
@@ -90,29 +88,130 @@ function accordeonMenu() {
 accordeonMenu();
 
 // АККОРДЕОН КОМАНДА
-    const accordElements = document.querySelector('.team__acco');
-    createAccord(accordElements);
-    
-    function createAccord(element) {
-        
-    let activeCont = document.querySelector('.team__acco-content--active');
+function accordeonTeam() {
+    const teamItems = document.querySelectorAll('.team__acco-item');
+    const teamAccord = document.querySelector('.team__acco');
 
-    element.addEventListener('click', function (event) {
+    teamAccord.addEventListener('click', function(event) {
         event.preventDefault();
-        
-        const trigger = event.target;
 
-        if (trigger.classList.contains('team__acco-trigger')) {
-            
-            if (activeCont) {
-                activeCont.classList.remove('team__acco-content--active');
-            } 
+        const target = event.target;
 
-            activeCont = trigger.nextElementSibling;
-            activeCont.classList.add('team__acco-content--active');
+        if (target.classList.contains('team__acco-trigger')) {
+            const item = target.parentNode;
+
+            for (const iterator of teamItems) {
+                if (iterator !== item) {
+                    iterator.classList.remove('is-active');
+                }
+            }
+
+            if (item.classList.contains('is-active')) {
+                item.classList.remove('is-active');
+            } else {
+                item.classList.add('is-active');
+            }
         }
+
     });
 }
+accordeonTeam();
+
 
 // СЛАЙДЕР В СЕКЦИИ БУРГЕРЫ
+function sliderBurger() {
+    const next = document.querySelector('.scroll-btn--next');
+    const prev = document.querySelector('.scroll-btn--prev');
+    const list = document.querySelector('.slider__list');
+    const items = list.querySelectorAll('.slider__item');
 
+    next.addEventListener('click', moveNext);
+    prev.addEventListener('click', movePrev);
+
+    let num = 2;
+
+    function moveNext() {
+        num++;
+        if (num > items.length) {
+            num = 1;
+        }
+        setOrder()
+        list.classList.remove('is-reverse')
+        moveItem();
+    }
+    function movePrev() {
+        num--;
+        if (num === 0) {
+            num = items.length;
+        }
+        setOrder()
+        list.classList.add('is-reverse')
+        moveItem();
+    }
+    function setOrder() {
+        let key = num;
+        for (const iterator of items) {
+            iterator.style.order = key;
+            key++
+            if (key > items.length) {
+                key = 1;
+            }
+        }
+    }
+    function moveItem() {
+        list.classList.remove('is-move');
+        setTimeout(() => {
+            list.classList.add('is-move');
+        }, 50);
+    }
+}
+sliderBurger();
+
+// СЕКЦИЯ ФОРМА. ОТПРАВКА НА СЕРВЕР
+const myForm = document.querySelector('#myForm');
+const sendButton = document.querySelector('#sendButton');
+
+sendButton.addEventListener('click', function(event) {
+    event.preventDefault();
+
+    if (validateForm(myForm)) {
+        console.log('все ок');
+    }
+});
+
+function validateForm(form) {
+    let valid = true;
+
+    if (!validateField(form.elements.name)) {
+        valid = false;
+    }
+    if (!validateField(form.elements.phone)) {
+        valid = false;
+    }
+    if (!validateField(form.elements.street)) {
+        valid = false;
+    }
+    if (!validateField(form.elements.house)) {
+        valid = false;
+    }
+    if (!validateField(form.elements.building)) {
+        valid = false;
+    }
+    if (!validateField(form.elements.floor)) {
+        valid = false;
+    }
+
+    return valid;
+}
+
+function validateField(field) {
+    if (!field.checkValidity()) {
+        field.nextElementSibling.textContent = field.validationMessage;
+
+        return false;
+    } else {
+        field.nextElementSibling.textContent = '';
+
+        return true;
+    }
+}
