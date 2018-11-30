@@ -14,8 +14,8 @@ function mobileMenu() {
     function toggleClass(e) {
         e.preventDefault();
 
-        navMobile.classList.toggle('nav-mobile--active');
-        navTrigger.classList.toggle('nav-trigger--active');
+        navMobile.classList.toggle('is-active');
+        navTrigger.classList.toggle('is-active');
     }
 }
 
@@ -233,3 +233,12 @@ function validateField(field) {
         return true;
     }
 }
+
+// СЕКЦИЯ ОТЗЫВЫ. openOverlay
+function openOverlay() {
+    const reviewsItems = document.querySelector('.reviews__list');
+    const buttons = document.querySelectorAll('.btn-overlay');
+
+    reviewsItems.addEventListener('')
+}
+openOverlay(); 

@@ -1,0 +1,63 @@
+#overlay {
+    position: fixed;
+    background-color: rgba($grey, 0.93);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    bottom: 0; 
+    right: 0;
+    z-index: 99;
+}
+
+.overlay__container  {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    background-color: white;
+    border-radius: 5px;
+
+    @include tablets {
+        width: 60%;
+    }
+    @include phones {
+        width: 90%;
+    }
+}
+
+.overlay__content {
+    padding: 20px;
+}
+
+.close-link {
+    display: block;
+}
+
+.close-cross {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+
+    &::before,
+    &::after {
+        content: "";
+        position: absolute;
+        top: 40%;
+        width: 20px;
+        height: 4px;
+        border-radius: 5px;
+        background-color: #e53939;
+    }
+
+    &::before {
+        transform: rotate(45deg);
+    }
+    &::after {
+        transform: rotate(-45deg);
+    }
+}
+
