@@ -171,25 +171,33 @@ sliderBurger();
 const myForm = document.querySelector('#myForm');
 const sendButton = document.querySelector('#sendButton');
 
+
 sendButton.addEventListener('click', function(event) {
     event.preventDefault();
-
+    
     if (validateForm(myForm)) {
-        const formData = {
-            name: myForm.elements.name.value,
-            phone: myForm.elements.phone.value,
-            comment: myForm.elements.comment.value,
-            to: 'test@test.com'
-        };
-
+        
+        let formData = new FormData(myForm);
+        
+        formData.append('name', myForm.elements.name.value);
+		formData.append('phone', myForm.elements.phone.value);
+		formData.append('comment', myForm.elements.comment.value);
+		formData.append('to', 'test@test.com');
+        
+        const overlay = createOverlay(document.querySelector('#overlayTemplate').innerHTML);
         const xhr = new XMLHttpRequest();
         xhr.responseType = 'json';
         xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
-        xhr.send(JSON.stringify(formData));
+        xhr.send(formData);
         xhr.addEventListener('load', () => {
-            if (xhr.response.status) {
-                console.log('все хорошо');
-            }
+            overlay.open();
+            if (xhr.status <= 400) {
+                const message = xhr.response.message;
+                overlay.setContent("", message);
+            } else {
+                const message = 'Ошибка. Повторите ещё раз';
+                overlay.setContent("", message);
+			}
         });
     }
 });

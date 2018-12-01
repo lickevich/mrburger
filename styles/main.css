@@ -706,7 +706,10 @@ p.text {
     border-top-color: #f9b43b;
     display: inline-block;
     vertical-align: middle;
-    margin-right: 0.625rem; }
+    margin-right: 0.625rem;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s; }
   @media (max-width: 768px) {
     .team__acco-trigger {
       font-size: 1.5rem; } }
