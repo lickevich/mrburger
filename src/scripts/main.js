@@ -236,9 +236,66 @@ function validateField(field) {
 
 // СЕКЦИЯ ОТЗЫВЫ. openOverlay
 function openOverlay() {
-    const reviewsItems = document.querySelector('.reviews__list');
-    const buttons = document.querySelectorAll('.btn-overlay');
+    const reviewsList = document.querySelector('.reviews__list');
+    const template = document.querySelector('#overlayTemplate').innerHTML;
+    const overlay = createOverlay(template);
 
-    reviewsItems.addEventListener('')
+    reviewsList.addEventListener('click', function(e) {
+        e.preventDefault();
+
+        const buttonOverlay = event.target;
+
+        if (buttonOverlay.classList.contains('btn-overlay')) {
+            overlay.open();
+            overlay.setContent('Петр Петров', 'Мысли все о них и о них, о них и о них. Нельзя устоять.Невозможно забыть... Никогда не думал, что булочки могут быть такими мягкими, котлета такой сочной, а сыр таким расплавленным.');
+        }
+    });
+
+    function createOverlay(template) {
+        let fragment = document.createElement('div');
+
+        fragment.innerHTML = template;
+
+        const overlayElement = fragment.querySelector('.overlay');
+        const contentElement = fragment.querySelector('.overlay__text');
+        const titleElement = fragment.querySelector('.overlay__title');
+        const closeElement = fragment.querySelector('.close-link');
+
+        fragment = null;
+
+        overlayElement.addEventListener('click', e => {
+            e.preventDefault();
+            if (e.target === overlayElement) {
+                closeElement.click();
+            }
+        });
+        closeElement.addEventListener('click', () => {
+            document.body.removeChild(overlayElement);
+        });
+        return {
+            open() {
+                document.body.appendChild(overlayElement);
+            },
+            close() {
+                closeElement.click();
+            },
+            setContent(title, content) {
+                contentElement.innerHTML = content;
+                titleElement.innerHTML = title;
+            }
+        };
+    }
 }
 openOverlay(); 
+
+// // one page scroll
+// function onePageScroll () {
+// const wrapper = document.querySelector('.wrapper');
+// const content = wrapper.querySelector('.maincontent');
+// const sections = content.querySelectorAll('.section');
+// const points = document.querySelectorAll('.point__item');
+// const dataScrollto = document.querySelectorAll('[data-scroll-to]');
+
+
+// }
+// onePageScroll();

@@ -120,7 +120,7 @@
                 </button>
             </div>
             <div class="slider__frame">
-              <ul class="slider__list">
+              <ul class="slider__list is-move">
                 <li class="slider__item">
                   <div class="burger">
                     <div class="burger__photo">
@@ -774,6 +774,12 @@
         </ul>
       </section>
 
+<!-- ----------------SECTION VIDEO----------------- -->
+
+      <section class="video section">
+
+      </section>
+
 <!-- ----------------SECTION FORM----------------- -->
 
       <section class="form section">
@@ -920,7 +926,7 @@
 
       <nav class="nav-points">
         <ul class="points__list">
-          <li class="point__item"><a href="#" class="point__link point__link--active"></a></li>
+          <li class="point__item"><a href="#" class="point__link is-active"></a></li>
           <li class="point__item"><a href="#" class="point__link"></a></li>
           <li class="point__item"><a href="#" class="point__link"></a></li>
           <li class="point__item"><a href="#" class="point__link"></a></li>
@@ -980,21 +986,19 @@
 
 <!-- ----------------OVERLAY----------------- -->
 
-      <template id="overlay">
-          <div class="overlay__container">
-              <a href="#" class="close-link">
-                <span class="close-cross"></span>
-              </a>
+      <script type="template" id="overlayTemplate">
+        <div class="overlay">
+          <div class="overlay__window">
+            <a href="#" class="close-link">
+              <span class="close-cross"></span>
+            </a>
             <div class="overlay__content">
-              <h5 class="overlay__title">Константин Спилберг</h5>
-              <p class="overlay__text">Мысли все о них и о них,
-                о них и о них. Нельзя устоять. Невозможно забыть...
-                Никогда не думал, что булочки могут быть такими мягкими,
-                котлета такой сочной, а сыр таким расплавленным.</p>
+              <h5 class="overlay__title"></h5>
+              <p class="overlay__text"></p>
             </div>
           </div>
         </div>
-      </template>
+      </script>
 
       <script src="./scripts/main.js"></script>
 </body>

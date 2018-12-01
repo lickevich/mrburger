@@ -1,4 +1,4 @@
-#overlay {
+.overlay {
     position: fixed;
     background-color: rgba($grey, 0.93);
     width: 100%;
@@ -7,17 +7,18 @@
     left: 0;
     bottom: 0; 
     right: 0;
-    z-index: 99;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.overlay__container  {
+.overlay__window  {
     position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     width: 40%;
     background-color: white;
     border-radius: 5px;
+
 
     @include tablets {
         width: 60%;
