@@ -259,42 +259,44 @@ function openOverlay() {
         }
     });
 
-    function createOverlay(template) {
-        let fragment = document.createElement('div');
-
-        fragment.innerHTML = template;
-
-        const overlayElement = fragment.querySelector('.overlay');
-        const contentElement = fragment.querySelector('.overlay__text');
-        const titleElement = fragment.querySelector('.overlay__title');
-        const closeElement = fragment.querySelector('.close-link');
-
-        fragment = null;
-
-        overlayElement.addEventListener('click', e => {
-            e.preventDefault();
-            if (e.target === overlayElement) {
-                closeElement.click();
-            }
-        });
-        closeElement.addEventListener('click', () => {
-            document.body.removeChild(overlayElement);
-        });
-        return {
-            open() {
-                document.body.appendChild(overlayElement);
-            },
-            close() {
-                closeElement.click();
-            },
-            setContent(title, content) {
-                contentElement.innerHTML = content;
-                titleElement.innerHTML = title;
-            }
-        };
-    }
 }
 openOverlay(); 
+
+// Overley
+function createOverlay(template) {
+    let fragment = document.createElement('div');
+
+    fragment.innerHTML = template;
+
+    const overlayElement = fragment.querySelector('.overlay');
+    const contentElement = fragment.querySelector('.overlay__text');
+    const titleElement = fragment.querySelector('.overlay__title');
+    const closeElement = fragment.querySelector('.close-link');
+
+    fragment = null;
+
+    overlayElement.addEventListener('click', e => {
+        e.preventDefault();
+        if (e.target === overlayElement) {
+            closeElement.click();
+        }
+    });
+    closeElement.addEventListener('click', () => {
+        document.body.removeChild(overlayElement);
+    });
+    return {
+        open() {
+            document.body.appendChild(overlayElement);
+        },
+        close() {
+            closeElement.click();
+        },
+        setContent(title, content) {
+            contentElement.innerHTML = content;
+            titleElement.innerHTML = title;
+        }
+    };
+}
 
 // // one page scroll
 // function onePageScroll () {
