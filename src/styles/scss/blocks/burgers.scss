@@ -25,6 +25,9 @@
             max-width: 80%;
             margin-bottom: 20px;
         }
+        @include phones {
+            max-width: 60%;
+        }
     }
 
     @include tablets {
@@ -69,9 +72,17 @@
 
     &-num {
         font-size: 62px;
+
+        @include phones {
+            font-size: 52px;
+        }
     }
     &-text {
         font-size: 32px;
+
+        @include phones {
+            font-size: 22px;
+        }
     }
 }
 

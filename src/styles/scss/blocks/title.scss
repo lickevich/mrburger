@@ -40,7 +40,11 @@ h2.title {
 
     &--form {
         text-align: center;
-        margin-bottom: 2.1875rem;
+        margin-bottom: 35px;
+
+        @include phones {
+            margin-bottom: 15px;
+        }
     }
 
     @include tablets {
