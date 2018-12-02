@@ -36,6 +36,10 @@ body {
   &--without-align {
     justify-content: space-between;
   }
+
+  &--center {
+    align-items: center;
+  }
 }
 
 .wrapper {
