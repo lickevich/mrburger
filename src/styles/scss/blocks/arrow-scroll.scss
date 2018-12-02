@@ -8,10 +8,15 @@
     align-self: center;
     margin-bottom: 30px;
     cursor: pointer;
+    outline: none;
 }
 
 .arrow-scroll-svg {
     height: 20px;
     width: 30px;
     fill: white;
+
+    &:hover {
+        opacity: 0.5;
+    }
 }

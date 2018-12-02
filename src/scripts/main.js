@@ -298,14 +298,146 @@ function createOverlay(template) {
     };
 }
 
-// // one page scroll
-// function onePageScroll () {
-// const wrapper = document.querySelector('.wrapper');
-// const content = wrapper.querySelector('.maincontent');
-// const sections = content.querySelectorAll('.section');
-// const points = document.querySelectorAll('.point__item');
-// const dataScrollto = document.querySelectorAll('[data-scroll-to]');
+// one page scroll
+function onePageScroll() {
+    const wrapper = document.querySelector('.wrapper');
+    const content = wrapper.querySelector('.maincontent');
+    const sections = content.querySelectorAll('.section');
+    const points = document.querySelectorAll('.point__item');
+    const dataScrollTo = document.querySelectorAll('[data-scroll-to]');
 
+    let isScroll = false;
 
-// }
-// onePageScroll();
+    addNavigation();
+    wheel();
+    keyPush();
+
+    function moveToSection(numSection) {
+        const position = `${numSection * -100}%`; //Конкатенация строк
+
+        if (isScroll) return;
+        
+        isScroll = true;
+
+        addClass(sections);
+
+        content.style.transform = `translateY(${position})`;
+
+        setTimeout(() => { //Стандартная функция. Выполнение задержки (1000 миллисекунд).
+
+            isScroll = false;
+            addClass(points);
+
+        }, 1000);
+
+        function addClass(arr) { //Добавление активного класса элементу по которому мы кликнули и удаление у других.
+            arr[numSection].classList.add('is-active');
+
+            for (const iterator of arr) {
+                if (iterator !== arr[numSection]) {
+                    iterator.classList.remove('is-active');
+                }
+            }
+        }
+    }
+
+    function addNavigation() {
+        for (const iterator of dataScrollTo) {
+            iterator.addEventListener('click', e => {
+                e.preventDefault();
+                moveToSection(iterator.dataset.scrollTo)
+            });
+        }
+    }
+
+    function wheel() {
+        document.addEventListener('wheel', e => { //Событие wheel отслеживает скролл.
+
+            const direct = e.deltaY > 0 ? 'up' : 'down' // если (e.deltaY > 0), то if('up'); если (e.deltaY < 0), то else('down').
+
+            scrollToSection(direct);
+        });
+    }
+
+    function defineSection(arr) {
+        for (let i = 0; i < arr.length; i++) {
+            const element = arr[i];
+            if (element.classList.contains('is-active')) {
+                return {
+                    elIndex: i,
+                    elActive: element,
+                    elNext: element.nextElementSibling,
+                    elPrev: element.previousElementSibling
+                }
+            }
+        }
+    }
+
+    function scrollToSection(direct) {
+        let section = defineSection(sections);
+
+        if (direct === 'up' && section.elNext) {
+            let numSection = section.elIndex + 1;
+            moveToSection(numSection);
+        }
+        if (direct === 'down' && section.elPrev) {
+            let numSection = section.elIndex - 1;
+            moveToSection(numSection);
+        }
+    }
+
+    function keyPush() {
+        document.addEventListener('keydown', e => {
+            switch (e.keyCode) { //Возвращает название кнопки.
+                case 40: //Номер кнопки вниз 40.
+                    scrollToSection('up');
+                    break;
+                case 38: //Номер кнопки вверх 38.
+                    scrollToSection('down');
+                    break;
+                default: //Срабатывает если не нажали 40 или 38.
+                    break;
+            }
+        });
+    }
+
+    if (isMobileDevice()) swipe();
+
+    function swipe() {
+        let touchStartY = 0;
+        let touchEndY = 0;
+
+        document.addEventListener('touchstart', e => {
+            touchStartY = e.changedTouches[0].screenY;
+            },
+            false
+        );
+
+        wrapper.addEventListener('touchmove', e => e.preventDefault());
+
+        document.addEventListener('touchend', e => {
+            touchEndY = e.changedTouches[0].screenY;
+            let direct = swipeDirect();
+            scrollToSection(direct);
+            },
+            false
+        );
+
+        function swipeDirect() {
+            let dif = touchStartY - touchEndY;
+            if (dif > 100) {
+                return 'up';
+            } else if (dif < -100) {
+                return 'down';
+            }
+        }
+    }
+
+    function isMobileDevice() {
+        return (
+            typeof window.orientation !== 'undefined' ||
+            navigator.userAgent.indexOf('IEMobile') !== -1
+        );
+    }   
+}
+onePageScroll();
