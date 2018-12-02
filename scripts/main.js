@@ -487,7 +487,7 @@ function init() {
         center: [59.94, 30.32],
         zoom: 12,
         controls: ['zoomControl'],
-        behaviors: ['drag']
+        behaviors: ['drag'] //Поведение карты (отключена прокрутка скролла мыши).
     });
 
    for (let i = 0; i < placemarks.length; i++) {
