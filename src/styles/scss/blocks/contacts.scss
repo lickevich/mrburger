@@ -1,9 +1,11 @@
 .contacts {
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.contacts__block {
-    background: url("../images/bg/map-bg.jpg") center center / cover no-repeat;
+.map {
     width: 100%;
     height: 100%;
 }

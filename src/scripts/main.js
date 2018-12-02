@@ -441,3 +441,81 @@ function onePageScroll() {
     }   
 }
 onePageScroll();
+
+//Плеер YouTube
+// let player;
+// function onYouTubeIframeAPIReady() {
+//     player = new YT.Player('yt-player', {
+//         height: '405',
+//         width: '660',
+//         videoId: 'M7lc1UVf-VE',
+//         events: {
+//         // 'onReady': onPlayerReady,
+//         // 'onStateChange': onPlayerStateChange
+//         }
+//     });
+// }
+
+//Яндекс карта
+ymaps.ready(init);
+
+const placemarks = [ //Массив
+    { //Объект
+        latitude: 59.97, //Широта
+        longitude: 30.32, //Долгота
+        hintContent: 'Кликните, чтобы посмотреть адрес',
+        balloonContent: 'Улица Пушкина, дом Колотушкина'
+    },
+    {
+        latitude: 59.96, 
+        longitude: 30.34, 
+        hintContent: 'Кликните, чтобы посмотреть адрес',
+        balloonContent: 'Улица Пушкина, дом Колотушкина'
+    },
+    {
+        latitude: 59.99, 
+        longitude: 30.36, 
+        hintContent: 'Кликните, чтобы посмотреть адрес',
+        balloonContent: 'Улица Пушкина, дом Колотушкина'
+    }
+];
+
+    geoObjects = [];
+
+function init() {
+    const map = new ymaps.Map('map', {
+        center: [59.94, 30.32],
+        zoom: 12,
+        controls: ['zoomControl'],
+        behaviors: ['drag']
+    });
+
+   for (let i = 0; i < placemarks.length; i++) {
+            geoObjects[i] = new ymaps.Placemark([placemarks[i].latitude, placemarks[i].longitude], 
+            {
+                hintContent: placemarks[i].hintContent,
+                balloonContent: placemarks[i].balloonContent
+            },
+            {
+                iconLayout: 'default#image',
+                iconImageHref: '../images/svgicons/map-marker.svg',
+                // iconImageClipRect: [[00, 00], [00, 00]], Координаты для изображения из спрайта.
+                iconImageSize: [46, 57],
+                iconImageOffset: [-23, -57] //Сдвиг центра иконки.
+            });
+    }
+    
+    const clusterer = new ymaps.Clusterer({
+        clusterIcons: [
+            {
+                href: '../images/content/intro/burger_main.png',
+                size: [100, 100],
+                offset: [-50, -50]
+            }
+        ],
+        clusterIconContentLayout: null
+    });
+
+    map.geoObjects.add(clusterer);
+    clusterer.add(geoObjects);
+}
