@@ -463,6 +463,11 @@ function onYouTubeIframeAPIReady() {
     });
 }
 
+const vid = document.getElementById("myVideo");
+function myVideo() { 
+    vid.load();
+} 
+
 function onPlayerStateChange(event) {
 
     switch(event.data) {
