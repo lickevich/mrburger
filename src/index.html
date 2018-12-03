@@ -779,10 +779,12 @@
         <section class="video section">
           <div class="container container--center">
             <h2 class="title title--video">как мы работаем</h2>
-            <div class="player">
+            <div class="player hidden">
               <div class="player__wrapper">
-                <div id="yt-player"></div>
-                <!-- <div class="player__splash"></div> -->
+                <div id="yt-player">
+                  <video src="#" class="player__video"></video>
+                </div>
+                <div class="player__splash"></div>
               </div>
               <div class="player__controls">
                 <button class="player__start"></button>
@@ -1020,7 +1022,7 @@
 
         <!-- Строкой ниже подключение библиотеки jQuery из сети. -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
-        <script src="https://api-maps.yandex.ru/2.1?apikey=<ваш API-ключ>&lang=ru_RU" type="text/javascript"></script>
+        <script src="https://api-maps.yandex.ru/2.1?apikey=551672bf-aa0f-4e36-9994-ff189f93fa79&lang=ru_RU" type="text/javascript"></script>
         <script src="https://www.youtube.com/iframe_api"></script>
         <!-- <script src="./scripts/jquery-3.3.1.min.js" type="text/javascript"></script> -->
         <script src="./scripts/main.js" type="text/javascript"></script>
