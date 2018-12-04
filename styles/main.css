@@ -110,6 +110,9 @@ body {
 .section {
   height: 100vh;
   min-height: 40.625rem; }
+  @media (max-width: 480px) {
+    .section {
+      min-height: auto; } }
 
 h1,
 h2,
