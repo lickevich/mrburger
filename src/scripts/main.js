@@ -447,7 +447,7 @@ function onYouTubeIframeAPIReady() {
     player = new YT.Player('yt-player', {
         height: '405',
         width: '660',
-        videoId: 'M7lc1UVf-VE',
+        videoId: 's0ZNnkuH1RQ',
         playerVars: {
             controls: 0,
             disablekb: 0,
@@ -462,11 +462,6 @@ function onYouTubeIframeAPIReady() {
         }
     });
 }
-
-const vid = document.getElementById("myVideo");
-function myVideo() { 
-    vid.load();
-} 
 
 function onPlayerStateChange(event) {
 
