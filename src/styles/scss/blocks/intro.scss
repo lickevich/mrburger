@@ -26,6 +26,13 @@
     }
 }
 
+.intro__picture {
+
+    @include phones {
+        width: 70%;
+    }
+}
+
 .intro__text {
     font-family: "Lifehack-Medium";
     font-size: 65px;
@@ -36,7 +43,6 @@
         font-size: 42px;
     }
 }
-
 
 .intro__burger__img {
     max-width: 100%;

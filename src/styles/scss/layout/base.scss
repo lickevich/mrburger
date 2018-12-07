@@ -58,9 +58,7 @@ body {
   height: 100vh;
   min-height: 650px;
 
-  @include tablets {
-    height: calc(var(--vh, 1vh) * 100);
-  }
+ 
 }
 
 
