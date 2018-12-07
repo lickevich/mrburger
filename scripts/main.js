@@ -551,8 +551,8 @@ function yandexMap() {
 
     ymaps.ready(init);
 
-    const placemarks = [ //Массив
-        { //Объект
+    const placemarks = [
+        {
             latitude: 59.97, //Широта
             longitude: 30.32, //Долгота
             hintContent: 'Кликните, чтобы посмотреть адрес',
@@ -613,3 +613,6 @@ function yandexMap() {
     }
 }
 yandexMap();
+
+let vh = window.innerHeight * 0.01;
+document.documentElement.style.setProperty('--vh', `${vh}px`);
