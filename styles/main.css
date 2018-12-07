@@ -110,10 +110,6 @@ body {
 .section {
   height: 100vh;
   min-height: 40.625rem; }
-  @media (max-width: 768px) {
-    .section {
-      height: -webkit-calc(var(--vh, 1vh) * 100);
-      height: calc(var(--vh, 1vh) * 100); } }
 
 h1,
 h2,
@@ -181,6 +177,10 @@ footer {
       margin: 0;
       text-align: center;
       width: 80%; } }
+
+@media (max-width: 480px) {
+  .intro__picture {
+    width: 70%; } }
 
 .intro__text {
   font-family: "Lifehack-Medium";
