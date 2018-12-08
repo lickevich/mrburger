@@ -110,9 +110,6 @@ body {
 .section {
   height: 100vh;
   min-height: 40.625rem; }
-  @media (max-width: 768px) {
-    .section {
-      height: 100%; } }
 
 h1,
 h2,
@@ -1714,6 +1711,16 @@ p.text {
 .player__wrapper.active .player__splash {
   display: none; }
 
+@media (max-width: 768px) {
+  .player__size {
+    height: 18.75rem;
+    width: 34.375rem; } }
+
+@media (max-width: 480px) {
+  .player__size {
+    height: 10.625rem;
+    width: 19.375rem; } }
+
 .player__controls {
   position: absolute;
   bottom: 0;
@@ -1758,6 +1765,12 @@ p.text {
   background: #626262;
   top: 0.9375rem;
   left: 3.125rem; }
+  @media (max-width: 768px) {
+    .player__playback {
+      width: 25rem; } }
+  @media (max-width: 480px) {
+    .player__playback {
+      width: 10.3125rem; } }
 
 .player__playback-button {
   background: #626262;

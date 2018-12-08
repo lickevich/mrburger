@@ -445,8 +445,8 @@ onePageScroll();
 let player;
 function onYouTubeIframeAPIReady() {
     player = new YT.Player('yt-player', {
-        height: '405',
-        width: '660',
+        height: '100' + '%',
+        width: '100' + '%',
         videoId: 's0ZNnkuH1RQ',
         playerVars: {
             controls: 0,
