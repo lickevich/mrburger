@@ -25,6 +25,17 @@
     }
   }
   
+ .player__size {
+    @include tablets {
+      height: 300px;
+      width: 550px;
+    }
+    @include phones {
+      height: 170px;
+      width: 310px;
+    }
+  }
+
   .player__controls {
     position: absolute;
     bottom: 0;
@@ -76,6 +87,13 @@
     background: #626262;
     top: 15px;
     left: 50px;
+
+    @include tablets {
+      width: 400px; 
+    }
+    @include phones {
+      width: 165px; 
+    }
   }
   
   .player__playback-button {
