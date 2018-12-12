@@ -47,7 +47,7 @@ html {
       font-size: 0.875rem; } }
   @media (max-width: 480px) {
     html {
-      font-size: 0.8125rem; } }
+      font-size: 0.75rem; } }
 
 html,
 body {
@@ -100,7 +100,7 @@ body {
   overflow: hidden; }
 
 .maincontent {
-  height: 100%;
+  height: 100vh;
   -webkit-transition: -webkit-transform 0.7s;
   transition: -webkit-transform 0.7s;
   -o-transition: transform 0.7s;
@@ -1711,15 +1711,17 @@ p.text {
 .player__wrapper.active .player__splash {
   display: none; }
 
-@media (max-width: 768px) {
-  .player__size {
-    height: 18.75rem;
-    width: 34.375rem; } }
-
-@media (max-width: 480px) {
-  .player__size {
-    height: 10.625rem;
-    width: 19.375rem; } }
+.player__size {
+  height: 23.75rem;
+  width: 37.5rem; }
+  @media (max-width: 768px) {
+    .player__size {
+      height: 18.75rem;
+      width: 34.375rem; } }
+  @media (max-width: 480px) {
+    .player__size {
+      height: 10.625rem;
+      width: 19.375rem; } }
 
 .player__controls {
   position: absolute;
