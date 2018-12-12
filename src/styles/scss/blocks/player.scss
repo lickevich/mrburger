@@ -26,6 +26,9 @@
   }
   
  .player__size {
+    height: 380px;
+    width: 600px;
+    
     @include tablets {
       height: 300px;
       width: 550px;

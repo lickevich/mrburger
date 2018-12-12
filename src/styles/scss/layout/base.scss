@@ -4,7 +4,7 @@ html {
     font-size: 14px;
   }
   @include phones {
-    font-size: 13px;
+    font-size: 12px;
   }
 }
 
@@ -50,7 +50,7 @@ body {
 }
 
 .maincontent {
-  height: 100%;
+  height: 100vh;
   transition: transform 0.7s;
 }
 
